@@ -1,9 +1,18 @@
 .alt-header {
-    padding: var(--horizontal-space);
-    margin-bottom: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--horizontal-space);
+    margin-bottom: 15px;
+    padding-top: 45px;
+    background-color: white;
+    z-index: 20;
 }
 
 .alt-header__title {
@@ -11,10 +20,24 @@
     font-weight: 600;
 }
 
+.alt-header__column {
+    width: 33%;
+}
+
 .alt-header__column:first-child {
     margin-right: auto;
 }
 
+.alt-header__column:nth-child(2) {
+    text-align: center;
+}
+
 .alt-header__column:last-child {
     margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alt-header__column:last-child span {
+    margin-left: 10px;
 }
